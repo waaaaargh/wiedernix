@@ -56,6 +56,7 @@ let
       BatteredBunny
     ];
     platforms = lib.platforms.linux ++ [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = lib.optionals stdenv.hostPlatform.isDarwin (

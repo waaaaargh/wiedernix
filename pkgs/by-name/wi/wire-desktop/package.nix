@@ -27,7 +27,7 @@ let
         hash = "sha256-pNu+/JKvaKSqHxNeDL8RcDy+FiY3aynQH06t05qgXrA=";
       };
     };
-    aarch64-darwin = rec {
+    x86_64-darwin = rec {
       version = "3.42.5489";
       src = fetchFromGitHub {
         owner = "wireapp";
@@ -37,6 +37,7 @@ let
       };
     };
     aarch64-linux = x86_64-linux;
+    aarch64-darwin = x86_64-darwin;
   };
   web-config = fetchFromGitHub {
     owner = "wireapp";
@@ -192,6 +193,7 @@ stdenv.mkDerivation (finalAttrs: {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
   };

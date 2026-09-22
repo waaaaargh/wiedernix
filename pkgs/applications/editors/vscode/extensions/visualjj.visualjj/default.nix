@@ -15,6 +15,10 @@ vscode-utils.buildVscodeMarketplaceExtension {
           arch = "linux-x64";
           hash = "sha256-is7nNav1inG96NoND/XcVQhltT2sbvHa7qkb+wMGAC0=";
         };
+        "x86_64-darwin" = {
+          arch = "darwin-x64";
+          hash = "sha256-OFdrXunh63xBZW/HwDDjj17TTiOLGY1Enb6ARxNc4bI=";
+        };
         "aarch64-linux" = {
           arch = "linux-arm64";
           hash = "sha256-hsuV25YRGatyfK7QEZkdxgc4hyyC6JEfzF2ilRd8hYI=";
@@ -52,6 +56,7 @@ vscode-utils.buildVscodeMarketplaceExtension {
       "aarch64-linux"
       "aarch64-darwin"
       "x86_64-linux"
+      "x86_64-darwin"
     ];
     maintainers = with lib.maintainers; [ sandarukasa ];
   };

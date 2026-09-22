@@ -107,6 +107,7 @@ stdenv.mkDerivation {
       "aarch64-windows"
       "i686-linux"
       "i686-windows"
+      "x86_64-darwin"
       "x86_64-linux"
       "x86_64-windows"
     ];

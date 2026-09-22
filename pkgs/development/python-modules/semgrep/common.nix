@@ -35,6 +35,10 @@ rec {
       platform = "manylinux_2_34_aarch64";
       hash = "sha256-yIGjBbll5ZS4ixXCxkGbOY525DjsYeYJFsiy7/6SckA=";
     };
+    x86_64-darwin = {
+      platform = "macosx_10_14_x86_64";
+      hash = "sha256-O0kSaWou5GeoVo1UMP4J2m4RAQOQUqA+YG3PaOvjfAo=";
+    };
     aarch64-darwin = {
       platform = "macosx_11_0_arm64";
       hash = "sha256-CeksnmwWNaFUnU4pey1KloTc01GyFu1/LrUc/FVHnEk=";

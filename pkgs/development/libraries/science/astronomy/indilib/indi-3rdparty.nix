@@ -177,6 +177,7 @@ let
         "armv6l-linux"
         "armv7l-linux"
         "aarch64-linux"
+        "x86_64-darwin"
       ];
     };
   };
@@ -197,6 +198,7 @@ let
         "x86_64-linux"
         "armv6l-linux"
         "armv7l-linux"
+        "x86_64-darwin"
       ];
     };
   };
@@ -449,6 +451,7 @@ let
         "armv6l-linux"
         "armv7l-linux"
         "aarch64-linux"
+        "x86_64-darwin"
       ];
     };
   };
@@ -535,6 +538,7 @@ let
         "armv6l-linux"
         "armv7l-linux"
         "aarch64-linux"
+        "x86_64-darwin"
       ];
     };
   };

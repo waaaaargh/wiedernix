@@ -15,6 +15,7 @@ echo "Updating osu-lazer-bin from $old_version to $new_version..."
 
 for pair in \
     'aarch64-darwin osu.app.Apple.Silicon.zip' \
+    'x86_64-darwin osu.app.Intel.zip' \
     'x86_64-linux osu.AppImage'
 do
     set -- $pair

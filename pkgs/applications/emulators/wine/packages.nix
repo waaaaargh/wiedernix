@@ -84,6 +84,7 @@ in
         if pkgs.stdenv.hostPlatform.isAarch64 then [ "--enable-archs=aarch64" ] else [ "--enable-win64" ];
       platforms = [
         "x86_64-linux"
+        "x86_64-darwin"
         "aarch64-linux"
       ];
       mainProgram = "wine";
@@ -144,6 +145,7 @@ in
           [ "--enable-archs=x86_64,i386" ];
       platforms = [
         "x86_64-linux"
+        "x86_64-darwin"
         "aarch64-linux"
       ];
       mainProgram = "wine";

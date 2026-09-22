@@ -94,6 +94,7 @@ rec {
       targetPlatformsWithHostTools = [
         # Platforms with host tools from
         # https://doc.rust-lang.org/nightly/rustc/platform-support.html
+        "x86_64-darwin"
         "aarch64-darwin"
         "i686-freebsd"
         "x86_64-freebsd"

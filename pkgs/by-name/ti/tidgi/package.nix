@@ -13,10 +13,18 @@ stdenv.mkDerivation (finalAttrs: {
   pname = "tidgi";
   version = "0.12.4";
 
-  src = fetchurl {
-    url = "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v${finalAttrs.version}/TidGi-darwin-arm64-${finalAttrs.version}.zip";
-    hash = "sha256-bSJFM67+KVECUqjwu1HYipn+zOps1ahNzM721yZL52c=";
-  };
+  src =
+    {
+      x86_64-darwin = fetchurl {
+        url = "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v${finalAttrs.version}/TidGi-darwin-x64-${finalAttrs.version}.zip";
+        hash = "sha256-nxfnPz2oxsYUsT2Q9ADDxVq5xcJvkNDQTBX8EkGUF4g=";
+      };
+      aarch64-darwin = fetchurl {
+        url = "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v${finalAttrs.version}/TidGi-darwin-arm64-${finalAttrs.version}.zip";
+        hash = "sha256-bSJFM67+KVECUqjwu1HYipn+zOps1ahNzM721yZL52c=";
+      };
+    }
+    .${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 
   dontBuild = true;
 
@@ -47,7 +55,10 @@ stdenv.mkDerivation (finalAttrs: {
       regex: '^\s*version\s*='
     fix: 'version = \"$latestVersion\";'
     " --update-all $(env EDITOR=echo nix edit --file . tidgi)
-    ${lib.getExe' common-updater-scripts "update-source-version"} tidgi $latestVersion --ignore-same-version --ignore-same-hash
+    systems=$(nix eval --json -f . tidgi.meta.platforms | ${lib.getExe jq} --raw-output '.[]')
+    for system in $systems; do
+      hash=$(nix hash convert --to sri --hash-algo sha256 $(nix-prefetch-url $(nix eval --raw --file . tidgi.src.url --system "$system")))
+      ${lib.getExe' common-updater-scripts "update-source-version"} tidgi $latestVersion $hash --system=$system --ignore-same-version --ignore-same-hash
     done
   '';
 
@@ -59,6 +70,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with lib.maintainers; [ klchen0112 ];
     platforms = [
       "aarch64-darwin"
+      "x86_64-darwin"
     ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };

@@ -80,5 +80,7 @@ Any comments or other manual changes between these markers will be removed when 
  - on `aarch64-linux`:
    - from source build
    - see if build (binary or source) works without expat
+ - on `x86_64-darwin`:
+   - from source build
  - on `aarch64-darwin`:
    - from source build

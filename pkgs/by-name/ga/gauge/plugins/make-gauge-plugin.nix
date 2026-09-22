@@ -37,6 +37,7 @@ let
     ;
   # Upstream uses a different naming scheme for platforms
   systemMap = {
+    "x86_64-darwin" = "darwin.x86_64";
     "aarch64-darwin" = "darwin.arm64";
     "aarch64-linux" = "linux.arm64";
     "x86_64-linux" = "linux.x86_64";

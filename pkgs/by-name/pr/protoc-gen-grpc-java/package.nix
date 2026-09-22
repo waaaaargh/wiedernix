@@ -80,6 +80,7 @@ stdenv.mkDerivation (finalAttrs: {
       "powerpc64le-linux"
       "s390x-linux"
       # Darwin
+      "x86_64-darwin"
       "aarch64-darwin"
       # Windows
       "x86_64-windows"

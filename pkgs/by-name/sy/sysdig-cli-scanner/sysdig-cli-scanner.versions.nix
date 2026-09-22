@@ -16,6 +16,11 @@
     hash = "sha256-E34rPFsIUIth8yzze1MudV4mGk9zNJnN1Jfb8Y7OiLs=";
   };
 
+  x86_64-darwin = {
+    url = "https://download.sysdig.com/scanning/bin/sysdig-cli-scanner/1.27.2/darwin/amd64/sysdig-cli-scanner";
+    hash = "sha256-J19TcXnR4cnr5Lk8yJ7KuX25xk4YqryXonWXoKFHe60=";
+  };
+
   aarch64-darwin = {
     url = "https://download.sysdig.com/scanning/bin/sysdig-cli-scanner/1.29.0/darwin/arm64/sysdig-cli-scanner";
     hash = "sha256-RUmqMIdIeTvMs3XO96+ZxUsaZvqSxXf5mVylR9eoDG4=";

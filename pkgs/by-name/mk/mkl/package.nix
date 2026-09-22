@@ -219,6 +219,7 @@ stdenvNoCC.mkDerivation (
       license = lib.licenses.issl;
       platforms = [
         "x86_64-linux"
+        "x86_64-darwin"
       ];
     };
   }

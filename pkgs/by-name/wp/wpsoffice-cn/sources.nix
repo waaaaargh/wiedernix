@@ -7,6 +7,10 @@
     url = "https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2023/28080/wps-office_12.1.2.28080.AK.preread.sw.Personal_765474_amd64.deb";
     hash = "sha256-L6mZ9gpx4hCTq0nvbX9h12aMhEv+vzCQfSwpDkYPm+A=";
   };
+  x86_64-darwin = {
+    url = "https://package.mac.wpscdn.cn/mac_wps_pkg/12.1.26016/WPS_Office_12.1.26016(26016)_x64.dmg";
+    hash = "sha256-pyjW1cUKX7RRFDQo2ik2L57fIwixLj0XqHMYTe4aE3g=";
+  };
   aarch64-darwin = {
     url = "https://package.mac.wpscdn.cn/mac_wps_pkg/12.1.26055/WPS_Office_12.1.26055(26055)_arm64.dmg";
     hash = "sha256-uEcjS6RXGcIPeBUnGw+J1A6Yy+TuxHwrRIKJUxBZYUI=";

@@ -10,7 +10,7 @@ let
   pname = "ookla-speedtest";
   version = "1.2.0";
 
-  srcs = {
+  srcs = rec {
     x86_64-linux = fetchurl {
       url = "https://install.speedtest.net/app/cli/${pname}-${version}-linux-x86_64.tgz";
       sha256 = "sha256-VpBZbFT/m+1j+jcy+BigXbwtsZrTbtaPIcpfZNXP7rc=";
@@ -27,10 +27,11 @@ let
       url = "https://install.speedtest.net/app/cli/${pname}-${version}-linux-armhf.tgz";
       sha256 = "sha256-5F/N672KGFVTU1Uz3QMtaxC8jGTu5BObEUe5wJg10I0=";
     };
-    aarch64-darwin = fetchurl {
+    x86_64-darwin = fetchurl {
       url = "https://install.speedtest.net/app/cli/${pname}-${version}-macosx-universal.tgz";
       sha256 = "sha256-yfgZIUnryI+GmZmM7Ksc4UQUQEWQfs5vU89Qh39N5m8=";
     };
+    aarch64-darwin = x86_64-darwin;
   };
 in
 

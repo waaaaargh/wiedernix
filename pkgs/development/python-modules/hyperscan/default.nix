@@ -63,6 +63,7 @@ buildPythonPackage (finalAttrs: {
     changelog = "https://github.com/darvid/python-hyperscan/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
     ];
     license = lib.licenses.mit;
     maintainers = [ ];

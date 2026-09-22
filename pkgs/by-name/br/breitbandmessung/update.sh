@@ -20,7 +20,7 @@ if [[ $current != $latest ]]; then
     url = "https://download.breitbandmessung.de/bbm/Breitbandmessung-${latest}-linux.deb";
     sha256 = "${linux_hash}";
   };
-  aarch64-darwin = {
+  x86_64-darwin = {
     url = "https://download.breitbandmessung.de/bbm/Breitbandmessung-${latest}-mac.dmg";
     sha256 = "${darwin_hash}";
   };

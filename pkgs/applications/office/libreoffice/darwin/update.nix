@@ -1,6 +1,7 @@
 # Impure functions, for passthru.updateScript runtime only
 {
-  url,
+  aarch64Url,
+  x86_64Url,
   version,
   pkgs ? import ../../../../../default.nix { },
 }:
@@ -13,5 +14,6 @@ in
 pkgs.mkShell rec {
   buildInputs = [ pkgs.common-updater-scripts ];
   newVersion = getLatestStableVersion;
-  newSha256 = getSha256 url version newVersion;
+  newAarch64Sha256 = getSha256 aarch64Url version newVersion;
+  newX86_64Sha256 = getSha256 x86_64Url version newVersion;
 }

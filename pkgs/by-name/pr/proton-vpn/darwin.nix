@@ -55,6 +55,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
 
   meta = meta // {
     platforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];

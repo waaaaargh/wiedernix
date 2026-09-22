@@ -10,6 +10,10 @@
       "asset": "scala-cli-aarch64-pc-linux.gz",
       "hash": "sha256-oS7VP0cj8+kxKiOD5HZktL6szyvjZs/0Ct9rBUQmFW8="
     },
+    "x86_64-darwin": {
+      "asset": "scala-cli-x86_64-apple-darwin.gz",
+      "sha256": "0a478k2qknzsfw5fccz3fwq4sha789i2rdprpj5dj9717aj1ygpi"
+    },
     "x86_64-linux": {
       "asset": "scala-cli-x86_64-pc-linux.gz",
       "hash": "sha256-QYa/rGVSCX+/05Ob3y7N7By1W6r8v2JZvvXATgiFjrM="

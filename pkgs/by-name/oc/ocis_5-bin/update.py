@@ -251,6 +251,7 @@ def main():
 
     systems = [
         ("darwin", "arm64", "aarch64-darwin"),
+        ("darwin", "amd64", "x86_64-darwin"),
         ("linux", "arm64", "aarch64-linux"),
         ("linux", "arm", "armv7l-linux"),
         ("linux", "amd64", "x86_64-linux"),

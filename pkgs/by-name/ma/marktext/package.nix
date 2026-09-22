@@ -173,6 +173,7 @@ stdenv.mkDerivation (finalAttrs: {
       bot-wxt1221
     ];
     badPlatforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     platforms = lib.platforms.unix;

@@ -9,6 +9,10 @@
       "filename": "swiftlint_linux_amd64.zip",
       "hash": "sha256-yu7W9KZ5w1U5/68ST2xKtKhBaRf32HliedxSt0AmBZ0="
     },
+    "x86_64-darwin": {
+      "filename": "portable_swiftlint.zip",
+      "hash": "sha256-1ssKp6L18e8wb8nje8tU3Jom+syPd4SsDD3T7M9ca6Y="
+    },
     "aarch64-darwin": {
       "filename": "portable_swiftlint.zip",
       "hash": "sha256-weQpsFmc8bUW82mi2ewE6vDkNvPBK2N9+IUfpS/2lNA="

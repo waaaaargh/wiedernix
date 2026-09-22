@@ -43,6 +43,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     ];
     maintainers = with lib.maintainers; [ delafthi ];
     platforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];

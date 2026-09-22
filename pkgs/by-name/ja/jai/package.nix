@@ -32,6 +32,7 @@ let
     maintainers = with lib.maintainers; [ samestep ];
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
   };

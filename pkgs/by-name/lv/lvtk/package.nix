@@ -51,6 +51,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with lib.maintainers; [ bot-wxt1221 ];
     platforms = lib.platforms.unix;
     badPlatforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
   };

@@ -43,4 +43,5 @@ updateVersion "$latestVersion"
 
 updateHash "$latestVersion" x86_64-linux   linux-amd64
 updateHash "$latestVersion" aarch64-linux  linux-arm64
+updateHash "$latestVersion" x86_64-darwin  darwin-amd64
 updateHash "$latestVersion" aarch64-darwin darwin-arm64

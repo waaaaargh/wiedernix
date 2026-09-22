@@ -60,4 +60,5 @@ applyUpdate() {
 }
 
 applyUpdate x86_64-linux Linux
+applyUpdate x86_64-darwin macOS
 applyUpdate aarch64-darwin "macOS arm64"

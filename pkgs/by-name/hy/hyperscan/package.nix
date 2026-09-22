@@ -134,6 +134,7 @@ stdenv.mkDerivation (finalAttrs: {
     maintainers = with lib.maintainers; [ avnik ];
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
     ];
     license = lib.licenses.bsd3;
   };

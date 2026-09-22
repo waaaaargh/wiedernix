@@ -22,6 +22,10 @@ let
       url = "https://download.jetbrains.com/python/pycharm-2026.2.0.1-aarch64.tar.gz";
       hash = "sha256-8ptqeCpY+rsjJxXbj++XZb/a68brWQ7UYsT5ZWIidCc=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/python/pycharm-2026.1.4.dmg";
+      hash = "sha256-Q5hTcYoNUzmAxwcsXJNS4medQjFKWc/Sgkybt4PQPfg=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/python/pycharm-2026.2.0.1-aarch64.dmg";
       hash = "sha256-X3YP6mtKkBvBp2UoQWfwX5AjenwwwKTSmP9GUESVDdQ=";
