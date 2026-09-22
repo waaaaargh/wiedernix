@@ -31,7 +31,7 @@ let
   # Nix language.
   x86_64DarwinDeprecationWarning =
     pristineLib.warn
-      "Nixpkgs 26.05 will be the last release to support x86_64-darwin; see https://nixos.org/manual/nixpkgs/unstable/release-notes#x86_64-darwin-26.05"
+      "x86_64-darwin support has been vibe-coded back into this nixpkgs fork and may or may not work reliably. Proceed at your own risk."
       (x: x);
 
   pristineLib = import ../../lib;
