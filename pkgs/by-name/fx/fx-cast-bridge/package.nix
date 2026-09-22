@@ -72,6 +72,7 @@ buildNpmPackage rec {
     platforms = [
       "x86_64-linux"
       "aarch64-darwin"
+      "x86_64-darwin"
     ]; # aarch64-linux wasn't support in upstream according to README
     broken = stdenv.hostPlatform.isDarwin;
     mainProgram = "fx_cast_bridge";

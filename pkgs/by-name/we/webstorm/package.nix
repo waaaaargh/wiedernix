@@ -21,6 +21,10 @@ let
       url = "https://download.jetbrains.com/webstorm/WebStorm-2026.2.0.1-aarch64.tar.gz";
       hash = "sha256-pt1MwGNXHT1QlePbVdtkwtYpenKlf53DGDG24+PM9tc=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/webstorm/WebStorm-2026.1.4.dmg";
+      hash = "sha256-SGdo6WYMCcCBuZUjvURcMTbJUqhZ4MzFlSLg6Zjr84I=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/webstorm/WebStorm-2026.2.0.1-aarch64.dmg";
       hash = "sha256-WtvL7DLrchsKlMPrsYeluxoPo/sXBaUw0WO1mlxtHkc=";

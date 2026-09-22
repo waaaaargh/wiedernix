@@ -94,6 +94,7 @@ stdenv.mkDerivation (finalAttrs: {
     teams = [ lib.teams.lisp ];
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
     ];
     homepage = "https://github.com/clasp-developers/clasp";
     mainProgram = "clasp";

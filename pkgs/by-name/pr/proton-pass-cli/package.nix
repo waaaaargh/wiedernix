@@ -63,6 +63,10 @@ stdenv.mkDerivation (finalAttrs: {
         url = "https://proton.me/download/pass-cli/${finalAttrs.version}/pass-cli-linux-aarch64";
         hash = "sha256-ZVo/bG6/hrC8Z8yy4JmgkBo63xP4zAdNlliGv+cEA/o=";
       };
+      "x86_64-darwin" = fetchurl {
+        url = "https://proton.me/download/pass-cli/${finalAttrs.version}/pass-cli-macos-x86_64";
+        hash = "sha256-K6vfr0ut8cQo1mrNeEN35akxLIo1sftt6hnn6wUa6Dk=";
+      };
       "x86_64-linux" = fetchurl {
         url = "https://proton.me/download/pass-cli/${finalAttrs.version}/pass-cli-linux-x86_64";
         hash = "sha256-9BiEMEZuCj1mi1Z5GotDAWLLIM6xCP7U/b/P530wgOY=";

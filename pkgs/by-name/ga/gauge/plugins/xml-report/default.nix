@@ -16,6 +16,7 @@ makeGaugePlugin {
     maintainers = [ ];
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
     platforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
       "aarch64-linux"
       "x86_64-linux"

@@ -29,6 +29,10 @@ let
       url = "https://download.jetbrains.com/cpp/CLion-2026.2.0.1-aarch64.tar.gz";
       hash = "sha256-IG2U2v9mTk+GCbB9jJVoX5hKju37+DfqRiMtxu8b8bo=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/cpp/CLion-2026.1.4.dmg";
+      hash = "sha256-AJt+K1zv4eyjdzubUeFGwB9mqzvOeb3ffA2k0MajPBs=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/cpp/CLion-2026.2.0.1-aarch64.dmg";
       hash = "sha256-nkkJ80rc1bApEBMZT0ZjZQcnhkzAG3i1p9GhQUA4gT4=";

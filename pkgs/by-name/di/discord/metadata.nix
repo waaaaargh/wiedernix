@@ -34,7 +34,7 @@ let
         self = discord-development;
       };
     };
-    aarch64-darwin = {
+    x86_64-darwin = {
       discord = rec {
         branch = "stable";
         binaryName = desktopName;
@@ -61,6 +61,7 @@ let
       };
     };
 
+    aarch64-darwin = x86_64-darwin;
     default = x86_64-linux; # Used for unsupported platforms, so we can return *something* there.
   };
 
@@ -80,6 +81,7 @@ let
     ];
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];

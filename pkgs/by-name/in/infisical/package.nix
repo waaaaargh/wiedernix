@@ -31,6 +31,7 @@ let
           # map the platform name to the golang toolchain suffix
           # NOTE: must be synchronized with update.sh!
           x86_64-linux = "linux_amd64";
+          x86_64-darwin = "darwin_amd64";
           aarch64-linux = "linux_arm64";
           aarch64-darwin = "darwin_arm64";
         }
@@ -89,6 +90,7 @@ stdenv.mkDerivation (finalAttrs: {
       "x86_64-linux"
       "aarch64-linux"
       "aarch64-darwin"
+      "x86_64-darwin"
     ];
   };
 })

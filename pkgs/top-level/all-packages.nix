@@ -3162,7 +3162,11 @@ with pkgs;
   };
   fasm-bin = callPackage ../development/compilers/fasm/bin.nix { };
 
-  fbc = callPackage ../development/compilers/fbc { };
+  fbc =
+    if stdenv.hostPlatform.isDarwin then
+      callPackage ../development/compilers/fbc/mac-bin.nix { }
+    else
+      callPackage ../development/compilers/fbc { };
 
   filecheck = with python3Packages; toPythonApplication filecheck;
 
@@ -8364,6 +8368,10 @@ with pkgs;
 
   docker = docker_29;
   docker-client = docker.override { clientOnly = true; };
+
+  docker-machine-hyperkit =
+    callPackage ../applications/networking/cluster/docker-machine/hyperkit.nix
+      { };
 
   drawpile-server-headless = drawpile.override {
     buildClient = false;

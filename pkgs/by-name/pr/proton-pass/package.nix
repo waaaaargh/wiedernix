@@ -22,6 +22,7 @@ let
         url = "https://proton.me/download/pass/macos/ProtonPass_${version}.dmg";
         hash = "sha256-+33eXc988leX22ByXGST9w9vsUcrD+PP8eUaoHtWDKI=";
       };
+      "x86_64-darwin" = passthru.sources."aarch64-darwin";
     };
     updateScript = writeShellScript "update-proton-pass" ''
       set -o errexit

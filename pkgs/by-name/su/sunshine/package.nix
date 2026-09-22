@@ -74,6 +74,7 @@ let
     {
       x86_64-linux = "Linux-x86_64";
       aarch64-linux = "Linux-aarch64";
+      x86_64-darwin = "Darwin-x86_64";
       aarch64-darwin = "Darwin-arm64";
     }
     .${stdenv.hostPlatform.system}
@@ -88,6 +89,7 @@ let
       {
         x86_64-linux = "sha256-1S57XfkJa+qEYQLmifWyT9ul0SASFhSk1lkk2timnOY=";
         aarch64-linux = "sha256-1HnlNem4AbcJkhZA8x5hC1/4cCqL8bJDjXNkHCI5IYw=";
+        x86_64-darwin = "sha256-rrOGahWwJikRfUn27Q4jVra2Q/MMSNitu0wS2UGKGWk=";
         aarch64-darwin = "sha256-jtBnSo0rn0VCnbfB90by1iBE4zvmtE86Wz2x+PolGmw=";
       }
       .${stdenv.hostPlatform.system};

@@ -51,6 +51,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
       "aarch64-darwin"
       "riscv64-linux"
       "x86_64-linux"
+      "x86_64-darwin"
     ];
   };
 })

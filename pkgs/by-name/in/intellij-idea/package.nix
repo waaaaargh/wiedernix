@@ -24,6 +24,10 @@ let
       url = "https://download.jetbrains.com/idea/ideaIU-2026.2.3-aarch64.tar.gz";
       hash = "sha256-hzKG3WQGlxojEYJ+3WbFYGDDRVgqSmsXdOOSUYOwLsU=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/idea/ideaIU-2026.1.4.dmg";
+      hash = "sha256-8K+LiewiINP4S9eqV0kGWtfy2Ff/zvBwX89iX7mYZ78=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/idea/ideaIU-2026.2.3-aarch64.dmg";
       hash = "sha256-qsPNxthEG5QFJHP+43qWeSQqNvSfYP3ObM6qPnrUbjM=";

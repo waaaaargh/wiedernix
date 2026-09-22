@@ -52,6 +52,7 @@ stdenvNoCC.mkDerivation rec {
       emaiax
     ];
     platforms = [
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];

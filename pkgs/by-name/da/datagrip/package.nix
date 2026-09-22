@@ -20,6 +20,10 @@ let
       url = "https://download.jetbrains.com/datagrip/datagrip-2026.2.2-aarch64.tar.gz";
       hash = "sha256-wVkVg0SeB0cf5ad2mt5nsPPg98tbMbCXQPEoFWQdK6U=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/datagrip/datagrip-2026.1.3.dmg";
+      hash = "sha256-vW2LEonl0D9S0VxbeJX4jRrwhELGBwlOXwiHslvh06E=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/datagrip/datagrip-2026.2.2-aarch64.dmg";
       hash = "sha256-EdZcvRD7rU7hfR4tYZrmUCC/tLfdC1eX+UZ/5wFwqqE=";
