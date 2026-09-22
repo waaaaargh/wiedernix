@@ -66,6 +66,10 @@ stdenv.mkDerivation (finalAttrs: {
         url = "https://fastdl.mongodb.org/linux/mongodb-linux-aarch64-ubuntu2404-${finalAttrs.version}.tgz";
         hash = "sha256-hIqjImtj0sZmgoU6fLp6ASdqL97bG+6iFoB62vuUndE=";
       };
+      "x86_64-darwin" = fetchurl {
+        url = "https://fastdl.mongodb.org/osx/mongodb-macos-x86_64-${finalAttrs.version}.tgz";
+        hash = "sha256-BLIFrmToU8tFHdjAD+0q827cyeDHoYiXwtsds6e7NMA=";
+      };
       "aarch64-darwin" = fetchurl {
         url = "https://fastdl.mongodb.org/osx/mongodb-macos-arm64-${finalAttrs.version}.tgz";
         hash = "sha256-ixFA3XRcI6yvuBIBL6w/9VnFkwZdtjGlvsPbr6+N0cI=";

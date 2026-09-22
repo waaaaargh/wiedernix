@@ -4,6 +4,10 @@
     "rust-project": "sha256-1kI0OHkBV8Cq9YR3T2Fyvn9jk9ZHD9sDD/Zx5eCDk3M=",
     "starlark_fmt": "sha256-7UX2aCbpR0cJDIEKqm63kWqeXk9UDfy4+NKuWoxh5YM="
   },
+  "x86_64-darwin": {
+    "buck2": "sha256-G/xarAld9dXanZl7Ivcuoer3YsytmFXWED44u2U4q8g=",
+    "rust-project": "sha256-jbvvqPI7+qpONhk8UZfSiFpMGCGWRr85BocA58d+C7Y="
+  },
   "aarch64-linux": {
     "buck2": "sha256-935OTtLIOgWqh0vFfC+P64yElBLQkWdLNccion3Ph5o=",
     "rust-project": "sha256-4zhvmVOM/w+R8VJ74HoNhrkLM4gX6MxrXvHc+Q5Kikg=",

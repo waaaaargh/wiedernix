@@ -25,6 +25,7 @@ stdenv.mkDerivation (finalAttrs: {
     {
       "aarch64-darwin" = "codegraph-darwin-arm64";
       "aarch64-linux" = "codegraph-linux-arm64";
+      "x86_64-darwin" = "codegraph-darwin-x64";
       "x86_64-linux" = "codegraph-linux-x64";
     }
     .${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
@@ -80,6 +81,10 @@ stdenv.mkDerivation (finalAttrs: {
       "aarch64-linux" = fetchurl {
         url = "https://github.com/colbymchenry/codegraph/releases/download/v${finalAttrs.version}/codegraph-linux-arm64.tar.gz";
         hash = "sha256-bck1p7jxph5oileLmOo0aA6y4217kdsHnWT0AR8aZo8=";
+      };
+      "x86_64-darwin" = fetchurl {
+        url = "https://github.com/colbymchenry/codegraph/releases/download/v${finalAttrs.version}/codegraph-darwin-x64.tar.gz";
+        hash = "sha256-Q2+WlDz9km6m0KhFTxiDPSElTV/Zs9IkMXsUJhMt75U=";
       };
       "x86_64-linux" = fetchurl {
         url = "https://github.com/colbymchenry/codegraph/releases/download/v${finalAttrs.version}/codegraph-linux-x64.tar.gz";

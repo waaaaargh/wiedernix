@@ -11,6 +11,7 @@ let
     {
       x86_64-linux = "linux_x86_64";
       aarch64-linux = "linux_x86_64";
+      x86_64-darwin = "mac_x86_64";
       aarch64-darwin = "mac_arm_64";
     }
     .${stdenv.hostPlatform.system}
@@ -63,6 +64,7 @@ let
       platforms = [
         "x86_64-linux"
         "aarch64-linux"
+        "x86_64-darwin"
         "aarch64-darwin"
       ];
     };

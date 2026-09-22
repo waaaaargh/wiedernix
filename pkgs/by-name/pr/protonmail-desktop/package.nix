@@ -28,6 +28,10 @@ stdenv.mkDerivation {
         url = "https://proton.me/download/mail/macos/${version}/ProtonMail-desktop.dmg";
         hash = darwinHash;
       };
+      "x86_64-darwin" = fetchurl {
+        url = "https://proton.me/download/mail/macos/${version}/ProtonMail-desktop.dmg";
+        hash = darwinHash;
+      };
     }
     ."${stdenv.hostPlatform.system}" or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 

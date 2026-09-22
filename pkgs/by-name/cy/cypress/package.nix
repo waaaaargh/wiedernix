@@ -29,6 +29,10 @@ let
       platform = "darwin-arm64";
       hash = "sha256-3ZPSwjLFUG8QaIsj7XgvwrA4TTXm3StGdSTd3qg0TJ4=";
     };
+    x86_64-darwin = {
+      platform = "darwin-x64";
+      hash = "sha256-cCLJloLcuCDgTEiMMJKY6rYiPPhZfFfqXFP5NAMhw4Q=";
+    };
   };
   inherit (stdenv.hostPlatform) system;
   binary =

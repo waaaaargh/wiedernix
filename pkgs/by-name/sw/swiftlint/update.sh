@@ -19,6 +19,7 @@ echo "Updating swiftlint from $old_version to $version"
 declare -A platforms=(
     [x86_64-linux]="swiftlint_linux_amd64.zip"
     [aarch64-linux]="swiftlint_linux_arm64.zip"
+    [x86_64-darwin]="portable_swiftlint.zip"
     [aarch64-darwin]="portable_swiftlint.zip"
 )
 

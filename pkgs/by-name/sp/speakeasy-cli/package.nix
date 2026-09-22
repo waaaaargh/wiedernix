@@ -31,6 +31,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   passthru = {
     sources = {
+      "x86_64-darwin" = fetchurl {
+        url = "https://github.com/speakeasy-api/speakeasy/releases/download/v${finalAttrs.version}/speakeasy_darwin_amd64.zip";
+        hash = "sha256-ZXTD4rZUTg7JBnoloHs0gysUHTmgxJotrP/70PYfAB8=";
+      };
       "x86_64-linux" = fetchurl {
         url = "https://github.com/speakeasy-api/speakeasy/releases/download/v${finalAttrs.version}/speakeasy_linux_amd64.zip";
         hash = "sha256-5qG9kl18ZXDxPj5FKzFQINL6UmBuvkLMEd9iidOZmHE=";

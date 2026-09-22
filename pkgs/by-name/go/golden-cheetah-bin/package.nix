@@ -18,6 +18,7 @@ let
     changelog = "https://github.com/GoldenCheetah/GoldenCheetah/releases/tag/v${version}";
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
       "aarch64-darwin"
     ];
     maintainers = with lib.maintainers; [

@@ -20,6 +20,10 @@ let
           url = "https://github.com/dbgate/dbgate/releases/download/v${version}/dbgate-${version}-linux_x86_64.AppImage";
           hash = "sha256-v3HPdY5so4IYY8tfk5mqjKOglCvcKk7uKYHV51DoiLM=";
         };
+        x86_64-darwin = {
+          url = "https://github.com/dbgate/dbgate/releases/download/v${version}/dbgate-${version}-mac_x64.dmg";
+          hash = "sha256-pTE8Na078B2njCrpuN0xt75PkjwepXnuhphB8Qqcsls=";
+        };
         aarch64-darwin = {
           url = "https://github.com/dbgate/dbgate/releases/download/v${version}/dbgate-${version}-mac_universal.dmg";
           hash = "sha256-GPdDglP2DVGCdchvj1Q5oLU3+DSzTccUbH5LmHGRj/M=";
@@ -38,6 +42,7 @@ let
     mainProgram = "dbgate";
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
       "aarch64-linux"
       "aarch64-darwin"
     ];

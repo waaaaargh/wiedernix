@@ -20,6 +20,10 @@ let
       url = "https://download.jetbrains.com/mps/2026.1/MPS-2026.1.tar.gz";
       hash = "sha256-NbURKu1jTPoJQvV8FpMacBa+FehF7XfF6xZmIhFlb2A=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/mps/2025.3/MPS-2025.3-macos.dmg";
+      hash = "sha256-whYAjKkF79mrknHflZnvOOy2bLosYUguelZDSuPt3uY=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/mps/2026.1/MPS-2026.1-macos-aarch64.dmg";
       hash = "sha256-5VtPS26/vCKa+mfDAQKgd9x5A+Cqv39Kz+2EKkgul+I=";

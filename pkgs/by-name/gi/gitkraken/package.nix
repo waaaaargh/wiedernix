@@ -66,6 +66,11 @@ let
       hash = "sha256-vudaXmTqCdRzkVzw3MyzfGSGGM9xfDO0Wims0vxM4yw=";
     };
 
+    x86_64-darwin = fetchzip {
+      url = "https://api.gitkraken.dev/releases/production/darwin/x64/${version}/GitKraken-v${version}.zip";
+      hash = "sha256-B4vFDrDy3s/d5MyGOP3pv/pGpUfpJFhvI8EWSqJhiyg=";
+    };
+
     aarch64-darwin = fetchzip {
       url = "https://api.gitkraken.dev/releases/production/darwin/arm64/${version}/GitKraken-v${version}.zip";
       hash = "sha256-T2AlXHW1eQvlJ7zFndg0sy4X4fITdPhTePk27utYAe0=";

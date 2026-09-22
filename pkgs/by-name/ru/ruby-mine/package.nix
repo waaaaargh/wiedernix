@@ -21,6 +21,10 @@ let
       url = "https://download.jetbrains.com/ruby/RubyMine-2026.2-aarch64.tar.gz";
       hash = "sha256-2T6thTMYAlfb6yJKbpuIyVtj7Af/P3AjQAVl16H35nM=";
     };
+    x86_64-darwin = {
+      url = "https://download.jetbrains.com/ruby/RubyMine-2026.1.4.dmg";
+      hash = "sha256-BLo2weIJK8gQAcMtAiETM7FMdhw9aoFIGh5Yqjv3k7s=";
+    };
     aarch64-darwin = {
       url = "https://download.jetbrains.com/ruby/RubyMine-2026.2-aarch64.dmg";
       hash = "sha256-rgskPMKLtgPpdSbbENJcE4g75VzqeWPLzxoXqzln67k=";

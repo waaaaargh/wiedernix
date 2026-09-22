@@ -16,6 +16,10 @@ vscode-utils.buildVscodeMarketplaceExtension {
           arch = "linux-x64";
           hash = "sha256-dZwOBehoYEqaYskvcPB55IKnG1CMToioyUJXlndqorA=";
         };
+        "x86_64-darwin" = {
+          arch = "darwin-x64";
+          hash = "sha256-b6LobvVngC0TFuWTC9JBQrECkoX7ewLNCpCROkXHk20=";
+        };
         "aarch64-linux" = {
           arch = "linux-arm64";
           hash = "sha256-/EaOfoubfq1ufwB7TTQ2hqmh1ZJiZ1+B6QeYu3MoFPI=";
@@ -64,6 +68,7 @@ vscode-utils.buildVscodeMarketplaceExtension {
     license = lib.licenses.unfree;
     platforms = [
       "x86_64-linux"
+      "x86_64-darwin"
       "aarch64-linux"
       "aarch64-darwin"
     ];

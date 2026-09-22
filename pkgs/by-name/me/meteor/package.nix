@@ -20,6 +20,10 @@ let
       url = "https://static.meteor.com/packages-bootstrap/${version}/meteor-bootstrap-os.linux.x86_64.tar.gz";
       hash = "sha256-4YwcHrFmD9BU2ebeSHHt+LDMXTW1DnFHs8j1SltInAg=";
     };
+    x86_64-darwin = fetchurl {
+      url = "https://static.meteor.com/packages-bootstrap/${version}/meteor-bootstrap-os.osx.x86_64.tar.gz";
+      hash = "sha256-Z9Had9hscEjxHch19KCYUTqN4OikYLfz1tqEpyxw2Y8=";
+    };
     aarch64-darwin = fetchurl {
       url = "https://static.meteor.com/packages-bootstrap/${version}/meteor-bootstrap-os.osx.arm64.tar.gz";
       hash = "sha256-5utHDLdIaNQlnWg/gH4IZc1kBctnsu8KJYkRa/9NTSM=";

@@ -102,6 +102,10 @@ stdenv.mkDerivation rec {
         url = "https://github.com/PowerShell/PowerShell/releases/download/v${version}/powershell-${version}-linux-arm64.tar.gz";
         hash = "sha256-kkgp5UyYNkj28UGaLcf5QzyGGy+1vVdzb/CWwk8TNyk=";
       };
+      x86_64-darwin = fetchurl {
+        url = "https://github.com/PowerShell/PowerShell/releases/download/v${version}/powershell-${version}-osx-x64.tar.gz";
+        hash = "sha256-8CBzpEJRWHeqWo82H1WGaAAQDEG2Zc+2SIO3fbuglBI=";
+      };
       x86_64-linux = fetchurl {
         url = "https://github.com/PowerShell/PowerShell/releases/download/v${version}/powershell-${version}-linux-x64.tar.gz";
         hash = "sha256-3bxKLRE7vUbSg8/ty80RenDK79dnP0HytOAAC63xA7w=";

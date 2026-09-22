@@ -40,6 +40,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.gpl3;
     maintainers = with lib.maintainers; [ jbedo ];
     platforms = [
+      "x86_64-darwin"
       "x86_64-linux"
     ];
     homepage = "https://subread.sourceforge.net/";

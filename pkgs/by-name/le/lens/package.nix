@@ -15,6 +15,10 @@ let
       url = "https://api.k8slens.dev/binaries/Lens-${version}-latest.x86_64.AppImage";
       hash = "sha512-21OGo4uXHjcvGNNiiy6hWm+tEJc4yFaYvVfXK89oH5oSrEpIacNlZ8I95tI0yjJQsuZEHBN9wBD+Zm6WgO4hFg==";
     };
+    x86_64-darwin = {
+      url = "https://api.k8slens.dev/binaries/Lens-${version}-latest.dmg";
+      hash = "sha512-I/i9s7O3jT+eNqqUu6B+rB+YbegKhAsZwHlc3mp2wNWW9YDilQbzKrhF9Fq2dSz2WKVZUscBtSGtXCuiPcFXzw==";
+    };
     aarch64-darwin = {
       url = "https://api.k8slens.dev/binaries/Lens-${version}-latest-arm64.dmg";
       hash = "sha512-kCL3jZHB644fRlwbmqNkusvC9k9EAi6EWsH8bEc9isGC4vwShkYw5Fu7U53nT6nh6wxba5aDMk9ZJWA3tB8Tgw==";

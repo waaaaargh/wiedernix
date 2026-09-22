@@ -18,6 +18,7 @@ let
     {
       x86_64-linux = "x64";
       aarch64-linux = "arm64";
+      x86_64-darwin = "x64";
     }
     ."${stdenv.hostPlatform.system}" or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
 
@@ -88,6 +89,7 @@ stdenv.mkDerivation rec {
     platforms = [
       "x86_64-linux"
       "aarch64-linux"
+      "x86_64-darwin"
     ];
     mainProgram = "Ombi";
   };
