@@ -64,8 +64,10 @@ let
       cat <<EOF > "$out/include/sys/types.h"
       #pragma once
       #include <stdint.h>
-      #if defined(__arm64__)
-      /* https://github.com/apple-oss-distributions/xnu/blob/94d3b452840153a99b38a3a9659680b2a006908e/bsd/arm/types.h#L120-L133 */
+      #if defined(__arm64__) || defined(__x86_64__)
+      /* These describe the userspace ABI width, so they are identical on both architectures:
+         https://github.com/apple-oss-distributions/xnu/blob/94d3b452840153a99b38a3a9659680b2a006908e/bsd/arm/types.h#L120-L133
+         https://github.com/apple-oss-distributions/xnu/blob/94d3b452840153a99b38a3a9659680b2a006908e/bsd/i386/types.h#L128-L141 */
       typedef int32_t user32_addr_t;
       typedef int32_t user32_time_t;
       typedef int64_t user64_addr_t;
