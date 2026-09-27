@@ -1,0 +1,110 @@
+name: Sync with upstream nixpkgs
+
+# Mirrors NixOS/nixpkgs master into this fork's master, then rebases the
+# fork's patch branches on top of it.
+#
+# Requirements:
+#   - Secret SYNC_TOKEN: a PAT (classic: `repo` + `workflow` scopes, or
+#     fine-grained: Contents + Workflows read/write on this repo). The default
+#     GITHUB_TOKEN is not allowed to push commits touching .github/workflows,
+#     which upstream commits regularly do.
+#   - Scheduled workflows only run from the default branch, so this file must
+#     live on the repository's default branch (e.g. nixpkgs-26.11-darwin).
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      branches:
+        description: "Space-separated branches to rebase onto upstream master"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-upstream
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_URL: https://github.com/NixOS/nixpkgs.git
+  UPSTREAM_BRANCH: master
+  MIRROR_BRANCH: upstream-master
+  PATCH_BRANCHES: nixpkgs-26.11-darwin
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: .github
+          persist-credentials: true
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream "$UPSTREAM_URL"
+          git config remote.upstream.promisor true
+          git config remote.upstream.partialclonefilter blob:none
+
+      - name: Fetch upstream
+        run: git fetch --no-tags --filter=blob:none upstream "$UPSTREAM_BRANCH"
+
+      - name: Update mirror branch
+        run: |
+          upstream_sha=$(git rev-parse "upstream/$UPSTREAM_BRANCH")
+          mirror_sha=$(git rev-parse "origin/$MIRROR_BRANCH")
+          if [ "$upstream_sha" = "$mirror_sha" ]; then
+            echo "$MIRROR_BRANCH already at $upstream_sha"
+            exit 0
+          fi
+          if ! git merge-base --is-ancestor "$mirror_sha" "$upstream_sha"; then
+            echo "::error::origin/$MIRROR_BRANCH has diverged from upstream; refusing to overwrite"
+            exit 1
+          fi
+          git push origin "$upstream_sha:refs/heads/$MIRROR_BRANCH"
+
+      - name: Rebase patch branches
+        env:
+          INPUT_BRANCHES: ${{ inputs.branches }}
+        run: |
+          branches="${INPUT_BRANCHES:-$PATCH_BRANCHES}"
+          onto="upstream/$UPSTREAM_BRANCH"
+          failed=()
+
+          for branch in $branches; do
+            echo "::group::$branch"
+            old_sha=$(git rev-parse "origin/$branch")
+            old_base=$(git merge-base "origin/$branch" "$onto")
+
+            if [ "$old_base" = "$(git rev-parse "$onto")" ]; then
+              echo "$branch is already up to date"
+              echo "::endgroup::"
+              continue
+            fi
+
+            git checkout -B "$branch" "origin/$branch"
+            if git rebase --onto "$onto" "$old_base" "$branch"; then
+              git push --force-with-lease="refs/heads/$branch:$old_sha" \
+                origin "$branch:refs/heads/$branch"
+            else
+              echo "::error::Rebase of $branch onto $onto has conflicts:"
+              git status --short | grep -E '^(UU|AA|DU|UD|AU|UA|DD) ' || true
+              git rebase --abort
+              failed+=("$branch")
+            fi
+            echo "::endgroup::"
+          done
+
+          if [ ${#failed[@]} -gt 0 ]; then
+            echo "::error::Failed to rebase: ${failed[*]} (resolve manually)"
+            exit 1
+          fi
